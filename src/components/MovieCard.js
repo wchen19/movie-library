@@ -1,0 +1,30 @@
+import React from "react";
+import "../styles/MovieCard.css";
+
+function MovieCard({ movie }) {
+  return (
+    <div>
+      <div className="movie">
+        <div className="movieYear">
+          <p>{movie.Year}</p>
+        </div>
+        <div className="moviePoster">
+          <img
+            src={
+              movie.Poster !== "N/A"
+                ? movie.Poster
+                : "https://via.placeholder.com/400"
+            }
+            alt={movie.Title}
+          />
+        </div>
+        <div className="movieInfo">
+          <span>{movie.Type}</span>
+          <h3>{movie.Title}</h3>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default MovieCard;
