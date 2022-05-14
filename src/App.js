@@ -35,7 +35,7 @@ function App() {
       `${API_URL}${movie.search}?api_key=${API_KEY}&query=${title}`
     );
     const data = await res.json();
-    setMovies(data.result);
+    setMovies(data.results);
   };
 
   return (
