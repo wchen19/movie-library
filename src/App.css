@@ -38,6 +38,10 @@ h1 {
   width: fit-content;
 }
 
+h1:hover {
+  cursor: pointer;
+}
+
 .empty {
   width: 100%;
   margin-top: 3rem;

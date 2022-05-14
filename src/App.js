@@ -41,7 +41,7 @@ function App() {
   return (
     <div className='app'>
       {/* <div style={showModal && 'display:block'}></div> */}
-      <h1>Movie Library</h1>
+      <h1 onClick={popularMovies}>Movie Library</h1>
       <Searchbar searchMovies={searchMovies} />
       {showModal ? (
         <MovieDetailModal
