@@ -1,0 +1,12 @@
+.video-card {
+  margin: 2rem 0.5rem 4rem;
+  width: 35rem;
+  height: 20rem;
+}
+
+@media screen and (max-width: 600px) {
+  .video-card {
+    width: 15rem;
+    height: 10rem;
+  }
+}
