@@ -1,0 +1,105 @@
+.movie-detail {
+  padding: 4rem;
+  background: #212426;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: white;
+  z-index: 1;
+}
+
+.movie-detail svg {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 3rem;
+}
+
+.movie-detail .img {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  opacity: 0.1;
+  height: 65vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.top-detail {
+  display: flex;
+  gap: 3rem;
+}
+
+.top-detail .movie-poster img {
+  width: 200px;
+}
+
+.top-detail .movie-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.movie-info .movie-title {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.movie-info .movie-title h2 {
+  padding-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.movie-info .movie-genre-date {
+  display: flex;
+  gap: 1rem;
+}
+
+.movie-info .movie-date {
+  font-weight: 200;
+  font-style: italic;
+}
+
+.movie-info .movie-genre {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.movie-info .movie-genre h4 {
+  font-weight: 300;
+}
+
+.movie-info .movie-overview h3 {
+  margin-bottom: 1rem;
+}
+
+.movie-info .movie-overview p {
+  font-weight: 300;
+}
+
+.bottom-detail {
+  margin-top: 6rem;
+}
+
+.bottom-detail .movie-trailer {
+  margin-top: 2rem;
+}
+
+.swiper-slide {
+  width: fit-content !important;
+  height: fit-content !important;
+  margin-right: 0 !important;
+  cursor: grab;
+  filter: drop-shadow(-12px 15px 13px rgba(0, 0, 0, 0.25));
+}
+
+@media screen and (max-width: 600px) {
+  .top-detail,
+  .movie-title,
+  .movie-genre-date,
+  .movie-genre {
+    flex-direction: column;
+  }
+}
