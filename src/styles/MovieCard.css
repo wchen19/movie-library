@@ -57,6 +57,12 @@
   letter-spacing: 2px;
   font-weight: 500;
   color: #f0f0f0;
+  display: flex;
+  gap: 10px;
+}
+
+.movie .movieInfo svg {
+  font-size: 16px;
 }
 
 .movie .movieInfo h3 {
@@ -80,7 +86,7 @@
   border: 4px solid rgb(177, 20, 20);
   border-radius: 20px;
   background: none;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 
   transition: transform 200ms ease;
 }
@@ -99,6 +105,7 @@
   background: rgb(177, 20, 20);
   font-weight: 400;
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 .movie:hover .movieReleaseDate {

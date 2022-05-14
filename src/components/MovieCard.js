@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
+import { IMG_PATH } from '../api/config';
 import '../styles/MovieCard.css';
 
-const IMG_PATH = 'https://image.tmdb.org/t/p/w500/';
-
-function MovieCard({ movie }) {
+function MovieCard({ movie, searchMovieDetail }) {
   const [date, setDate] = useState('');
 
   const getDate = () => {
@@ -47,10 +47,20 @@ function MovieCard({ movie }) {
           />
         </div>
         <div className='movieInfo'>
-          <span>{`Rating: ${movie.vote_average}`}</span>
+          <span>
+            <ThumbUpAltIcon />
+            {` ${movie.vote_average}`}
+          </span>
           <h3>{movie.title}</h3>
           <div>
-            <button>See Detail</button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                searchMovieDetail(movie.id);
+              }}
+            >
+              See Detail
+            </button>
           </div>
         </div>
       </div>
