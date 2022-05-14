@@ -39,7 +39,7 @@ function MovieCard({ movie, searchMovieDetail }) {
         <div className='moviePoster'>
           <img
             src={
-              movie.poster_path !== 'N/A'
+              movie.poster_path !== null
                 ? `${IMG_PATH + movie.poster_path}`
                 : 'https://via.placeholder.com/400'
             }

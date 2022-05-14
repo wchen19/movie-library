@@ -69,7 +69,11 @@ const MovieDetailModal = ({ movieDetail, setShowModal }) => {
       </div>
 
       <img
-        src={`${IMG_PATH + movieDetail.backdrop_path}`}
+        src={
+          movieDetail.backdrop_path !== null
+            ? `${IMG_PATH + movieDetail.backdrop_path}`
+            : null
+        }
         alt={movieDetail.title}
         className='img'
       />
@@ -77,7 +81,7 @@ const MovieDetailModal = ({ movieDetail, setShowModal }) => {
         <div className='movie-poster'>
           <img
             src={
-              movieDetail.poster_path !== 'N/A'
+              movieDetail.poster_path !== null
                 ? `${IMG_PATH + movieDetail.poster_path}`
                 : 'https://via.placeholder.com/400'
             }
